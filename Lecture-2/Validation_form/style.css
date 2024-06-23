@@ -1,0 +1,30 @@
+form{
+    height: 20rem;
+    width: 30rem;
+    padding: 40px;
+    border: 2px solid red; 
+    margin: 2px auto;
+}
+input{
+    height: 2rem;
+    width: 20rem;
+    display: inline-block;
+}
+
+label{
+    display: block;
+    font-size: 20px;
+}
+
+span{
+    font-size: 20px;
+    color: red;
+}
+
+button{
+    font-size: 20px;
+    height: 50px;
+    width: 90px;
+}
+
+
