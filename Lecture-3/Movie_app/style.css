@@ -1,0 +1,25 @@
+input{
+    border: 3px solid black;
+    border-radius: 30px;
+    font-size: 30px;
+    width: 60%;
+    height: 3rem;
+}
+
+h1{
+    text-align: center;
+}
+
+button{
+    margin-left: 30px;
+    border-radius: 30px;
+    font-size: 20px;
+    background: red;
+    color: white;
+    height: 2.5rem;
+    width: 7rem;
+}
+/* 
+div{
+    border: 2px solid  blueviolet;
+} */
