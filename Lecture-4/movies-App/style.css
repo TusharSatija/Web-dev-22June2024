@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    margin-left: 30rem;
+    height: 2rem;
+    width: 17rem;
+    font-size: 30px;
+}
+
+
+button{
+    height: 3rem;
+    width:6rem;
+    font-size: 15px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua ;
+    height: 4rem;
+
+}
+ul li{
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style: none;
+}
+
+#list{
+    display: flex;
+    width: 97vw;
+    flex-wrap: wrap; 
+}
+
+h2,h5{
+    text-align: center;
+    font-size: small;
+}
+h1{
+    text-align: center;
+}
+
+
+figure{
+    padding: 20px;
+    border: 2px solid black;
+}
