@@ -2,7 +2,10 @@ let img=document.querySelector('img');
 let audioplay=document.querySelector('#audioPlayer');
 let prevBtn=document.querySelector('#prevbtn');
 let nextBtn=document.querySelector('#nextbtn');
-let playPause=document.querySelector('#playpausebtn')
+let playPause=document.querySelector('#playpausebtn');
+let searchSong=document.querySelector('#searchSong');
+let input=document.querySelector('input');
+
 let songs=[
     {
         SongName:"Cheques",
@@ -20,6 +23,27 @@ let songs=[
         imgUrl:'https://i1.sndcdn.com/artworks-PqWB9CjeSvjRTfKx-nCbhKQ-t500x500.jpg'
     }
 ]
+
+
+searchSong.addEventListener('click',()=>{
+    console.log(input.value);
+
+    let searchdata=input.value.toLowerCase();
+    const foundSong=songs.find((song)=>{
+        return song.SongName.toLowerCase().includes(searchdata)  
+        
+    })
+
+    console.log(foundSong);
+    if(foundSong){
+        const ind=songs.indexOf(foundSong);
+        loadSong(ind);
+    }
+    else{
+        alert("Song not found !!")
+    }
+
+})
 
 
 function loadSong(index)

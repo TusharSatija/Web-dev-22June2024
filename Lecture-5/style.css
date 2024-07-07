@@ -51,3 +51,20 @@ button{
     display:flex ;
     justify-content: space-evenly;
 }
+
+#searchSong{ 
+    font-style: oblique;
+    font-size: 10px;
+    height: 40px;
+    width: 90px;
+    color: white;
+    background-color: green;
+}
+
+input{
+    height: 2rem;
+    width: 400px;
+    margin-left: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+}
