@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+ul{
+    padding-top: 30px;
+    display: flex;
+    height: 3rem;
+    justify-content: space-around;
+    background-color: blueviolet;
+}
+
+ul li{
+    list-style: none;
+    font-size: 23px;
+}
+.container img{
+     padding-left: 30px;
+    width: 700px;
+    height: 24rem;
+}
+
+.container{
+    /* margin: 10px; */
+    height: 40rem;
+    width: 50vw;
+    border: 2px solid black;
+    margin: 3px auto;
+}
+
+button{
+    height: 4rem;
+    width: 144px;
+    font-size: 25px;
+    border-radius: 20px;
+    background: orange;
+}
+
+#audioPlayer{
+    width: 700px;
+    padding: 20px;
+
+}
+#btn{
+    display:flex ;
+    justify-content: space-evenly;
+}
