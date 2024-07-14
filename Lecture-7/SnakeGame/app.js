@@ -1,8 +1,6 @@
 const canvas=document.querySelector('canvas');
 const pen=canvas.getContext('2d');
 pen.fillStyle='yellow';
-
-
 const cs=67;
 const w=1200;
 const h=735;
@@ -163,7 +161,6 @@ function RandomFood()
 function gameLoop()
 {
     draw();
-
     snake.updateSnake();
 }
 init();

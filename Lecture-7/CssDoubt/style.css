@@ -1,0 +1,13 @@
+section{
+    display: grid;
+    border: 2px solid black;
+    width: 70vw; 
+    grid-template-columns:repeat(10,1fr);
+    grid-gap: 10px;
+}
+section div{
+    text-align: center;
+    height: 10rem;
+    width: 10rem;
+    border: 2px solid red;
+}
