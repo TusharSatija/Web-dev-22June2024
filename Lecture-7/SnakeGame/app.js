@@ -7,6 +7,7 @@ const cs=67;
 const w=1200;
 const h=735;
 let food=null;
+let score=0;
 
 
 const snake={
@@ -37,25 +38,62 @@ const snake={
         let nextX;
         let nextY;
 
+        if(HeadX===food.x && HeadY===food.y)
+        {
+            food=RandomFood();
+            score++;
+        }
+        else{
+            //remove from first cell (snake)
+            this.cells.shift();
+        }
+
         if(this.direction=='down')
         {
             nextX=HeadX;
             nextY=HeadY+1;
+
+            if(nextY*cs>=h)
+            {
+                pen.fillStyle='red';
+                pen.fillText('Game Over !!' ,200,200);
+                clearInterval(id);
+            }
         }
 
         else  if(this.direction=='up')
         {
             nextX=HeadX;
             nextY=HeadY-1;
+
+            if(nextY*cs<0)
+            {
+                pen.fillStyle='red';
+                pen.fillText('Game Over !!' ,200,200);
+                clearInterval(id);
+            }
         }
         else if(this.direction=='left')
         {
             nextX=HeadX-1;
             nextY=HeadY;
+
+            if(nextX*cs<0)
+            {
+                pen.fillStyle='red';
+                pen.fillText('Game Over !!' ,200,200);
+                clearInterval(id);   
+            }
         }
         else{
             nextX=HeadX+1;
             nextY=HeadY;
+            if(nextX*cs>=w)
+                {
+                    pen.fillStyle='red';
+                    pen.fillText('Game Over !!' ,200,200);
+                    clearInterval(id);   
+                }
         }
 
         this.cells.push({
@@ -63,6 +101,11 @@ const snake={
             y:nextY
         });
     }
+}
+
+function update()
+{
+    snake.updateSnake();
 }
 
 
@@ -97,13 +140,18 @@ function init()
 }
 function draw(){
     pen.clearRect(0,0,w,h);
+    pen.font='40px san-serif';
+    pen.fillText(`score : ${score}`,100,80);
+    pen.fillStyle='red';
+    pen.fillRect(food.x*cs,food.y*cs,cs,cs);
+    pen.fillStyle='yellow';
     snake.drawSnake();
 }
 
 function RandomFood()
 {
-    const foodx=Math.round((Math.random()*w-cs/cs));
-    const foody=Math.round((Math.random()*h-cs/cs));
+    const foodx=Math.round((Math.random()*(w-cs)/cs));
+    const foody=Math.round((Math.random()*(h-cs)/cs));
 
     food={
         x:foodx,
@@ -114,9 +162,10 @@ function RandomFood()
 }
 function gameLoop()
 {
-    draw(); 
+    draw();
+
     snake.updateSnake();
 }
 init();
 // gameLoop();
-setInterval(gameLoop,500);
+const id=setInterval(gameLoop,500);
