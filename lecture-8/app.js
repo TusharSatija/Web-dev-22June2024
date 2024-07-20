@@ -3,6 +3,9 @@ const app=express();
 const path=require('path');
 app.set('view engine','ejs');
 app.set(path.join(__dirname,'views'));
+const bodyparser=require('body-parser');
+
+app.use(bodyparser.urlencoded({extended:true}));
 
 
 app.get('/home',(req,res)=>{
