@@ -1,0 +1,14 @@
+.nav1{
+    height: 4rem;
+    background-color: red; 
+     
+    font-size: 2rem;
+}
+.ul1{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px auto;
+    list-style: none;
+}
+
