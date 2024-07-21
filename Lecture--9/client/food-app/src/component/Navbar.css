@@ -1,0 +1,13 @@
+.nav{
+    background-color: red;
+    color: white;
+    font-size: 2rem;
+}
+
+.nav ul{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2px auto;
+    list-style: none;
+}
